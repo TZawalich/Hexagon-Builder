@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+	<html lang='en'>
+		<head>
+			<meta charset="utf-8">
+			<title>Hexagon Builder</title>
+			<meta name="description" content="Hexagon builder">
+			<link rel="stylesheet" href="css/hexagonStyle.css">
+			<link rel="stylesheet" href="css/colorpicker.css">
+		</head>
+		<body>
+			<div id="hexSettings">
+				<h1>Web Hexagon Builder</h1>
+				<div id="hexSize">
+					<p><b>Hexagon Width</b></p>
+					<span>Min: 10px</span><input type="range" min="10" max="500" value="200" class="hexSlider" id="hexSlider"><span>Max: 500px</span>
+					<p id="sliderValue"><b>200px</b></p>
+				</div>
+				<div id="rowOne">
+					<div id="colOneRowOne">
+						<div id="hexColor">
+							<p><b>Pick a color</b></p>
+							<div id="colorDisplayPicker">
+								<div id="currentColor"></div>
+							</div>
+							<p id="hexColorText">#ff0000</p>
+						</div>
+					</div>
+					<div id="colTwoRowOne">
+						<div id="hexShadowHolder">
+							<form>
+								<input type="checkbox" id="hexShadow"> <label for="hexShadow">Use Drop Shadow</label> <br>
+								Color: <input type="text" value="#999999" id="shadowColor" disabled="disabled">
+								X-offset: <input type="text" value="5px" id="shadowXOffset" disabled="disabled">
+								Y-offset: <input type="text" value="5px" id="shadowYOffset" disabled="disabled">
+								Blur: <input type="text" value="5px" id="shadowBlur" disabled="disabled">
+							</form>
+						</div>
+						<div id="hexagonTextHolder">
+							<form>
+								<input type="checkbox" id="checkHexText"> <label for="checkHexText">Use Text</label> <br>
+								Enter Hexagon Text: <input type="text" value="I'm a Hexagon!" id="hexagonTextInput" disabled="disabled">
+								Text Size: <input type="text" value="1.5em" id="hexagonTextSize" disabled="disabled">
+								Text Color: <input type="text" value="#ffffff" id="hexagonTextColor" disabled="disabled">
+							</form>
+						</div>
+					</div>
+				</div><!--rowOne-->
+				<div id="rowTwo">
+					<div id="hexBackground">
+						<form>
+							<input type="checkbox" id="hexBackgroundCheckbox"> <label for="hexBackgroundCheckbox">Use Background Image</label><br>
+							Image URL (use site url): <input type="text" size="35" id="hexBackgroundURL" value="myEyes.jpg" disabled="disabled">
+						</form>
+					</div> 
+					<div id="anchorHexagon">
+						<form>
+							<input type="checkbox" id="hexagonLinkCheck"> <label for="hexagonLinkCheck">Make Hexagon a Link</label> <br>
+							URL: <input type="text" size="35" placeholder="Post link here" id="hexagonLinkURL" disabled="disabled">
+						</form>
+					</div>
+				</div>
+				<h4>(Code Output Below)</h4>
+				<p id="disclaimer">*If you are using Firefox, you <i>may</i> need to hard refresh (shift + f5) in order to clear
+				the page cache when refreshing to reset the page. The browser has a tendency to hang onto the state of
+				checkboxes (checked or not). It can make the page go a bit wonky.</p>
+			</div>
+			
+			<div id="hexHolder">
+				<div id="hexagon">
+					<a href="#!" id="hexAnchor">
+						<div id="hexText"><p></p></div>
+						<div id="insideHexOne"></div>
+						<div id="insideHexTwo"></div>
+					</a>
+				</div>
+			</div>
+			
+			<div id="codeHolder">
+				<div id="hexHTML">
+					
+				</div>
+				<div id="hexCSS">
+					<div id="hexagonCSS"></div>
+				</div>
+			</div>
+			<script src="js/jquery.js"></script>
+			<script src="js/colorpicker.js"></script>
+			<script src="js/eye.js"></script>
+			<script src="js/layout.js"></script>
+			<script src="js/utils.js"></script>
+			<script src="js/hexagon.js"></script>
+		</body>
+	</html>

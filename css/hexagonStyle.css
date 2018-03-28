@@ -1,0 +1,283 @@
+body{
+  color: #000;
+  font-size: 1em;
+  font-family: verdana, trebuchet, arial, sans-serif;
+  text-align: left;
+  margin: 0;
+  position: relative;
+  background-color: #b3daff;
+}
+
+label{
+	cursor: pointer;
+	font-weight: bold;
+	padding: 10px;
+}
+
+form{
+	line-height: 1.8;
+}
+
+p{
+	margin-top: 11px;
+	margin-bottom: 11px;
+}
+
+/*------------ Options __________*/
+#hexSettings{
+	background-color: #b3daff;
+	padding: 20px;
+  padding-top: 0;
+
+}
+		#hexSettings h1, #hexSettings h4{
+			text-align: center;
+			margin-top: 20px;
+		}
+
+#rowOne{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+		#colOneRowOne{
+			width: 20%;
+			min-width: 150px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		#colTwoRowOne{
+			width: 79%;
+			min-width: 600px;
+			display: inline-block;
+		}
+
+#rowTwo{
+	width: 80%;
+	text-align: center;
+	margin: auto;
+}
+
+#hexSize{
+	background-color: #e6f3ff;
+	padding: 5px;
+	border-radius: 5px;
+	width: calc(79% - 10px);
+	margin: auto;
+	text-align: center;
+}
+		#hexSlider{
+			width: 80%;
+			height: 15px;
+			background-color: #ccc;
+			border-radius: 5px;
+		}
+		
+		#hexSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* slider width */
+    height: 25px; /* Slider height */
+		border-radius: 50%;
+    background: #f00; /* red slider */
+    cursor: pointer; 
+		}	
+		#hexSlider::-moz-range-thumb {
+    width: 25px; 
+    height: 25px; 
+		border-radius: 50%;
+    background: #f00; 
+    cursor: pointer; 
+		}
+		
+#hexColor{
+	background-color: #e6f3ff;
+	padding: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	text-align: center;
+	margin: 5px;
+	min-width: calc(100% - 20px);
+}
+
+#hexBackground{
+	background-color: #e6f3ff;
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+	width: 40%;
+}
+
+#hexShadowHolder{
+	background-color: #e6f3ff;
+	padding: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 5px;
+	width: calc(100% - 20px);
+}
+
+#anchorHexagon{
+	background-color: #e6f3ff;
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+	width: 40%;
+}
+
+#hexagonTextHolder{
+	background-color: #e6f3ff;
+	padding: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 5px;
+	margin-top: 0;
+	width: calc(100% - 20px);
+}
+
+#disclaimer{
+	width: 80%;
+	margin: 10px auto;
+	margin-bottom: 5px;
+}
+/*-------------color picker ----------------*/
+#colorDisplayPicker{
+	height: 40px;
+	width: 50px;
+	background-color: #ccc;
+	border: 2px solid #000;
+	border-radius: 5px;
+	margin: auto;
+  cursor: pointer;
+}
+
+#currentColor{
+	height: 100%;
+	width: 100%;
+	border-radius: 3px;
+	background-color: #ff0000;
+}
+
+
+/*--------------------hexagon----------------------*/
+#hexHolder{
+	padding: 120px 0 120px 0;
+	text-align: center;
+	background-color:#e6e6e6;
+	background-image: linear-gradient(#999 2px, transparent 2px),
+	linear-gradient(90deg, #999 2px, transparent 2px),
+	linear-gradient(rgba(153,153,153,.3) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(153,153,153,.3) 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+	margin: auto;
+	min-height: 300px;
+}
+
+#hexagon{ /* change top margin for placing under elements based on height of hex*/
+  z-index: 5;
+	position: relative;
+  display: inline-block;
+  margin: 45px 10px 45px 10px; /*adjust this for spacing*/
+	margin-left: 0;
+	margin-right: 0;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#hexAnchor{
+  height: 115px;
+	width: 200px;
+	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	background-color: #f00;
+	cursor: default;
+}
+
+#hexText{
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  padding: 10px;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+#hexText p{
+	margin: 0;
+}
+
+#insideHexOne{
+	height: 100%;
+	width: 100%;
+	transform: rotate(60deg);
+	background: inherit;
+	z-index: -1;
+	position: absolute;
+  top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#insideHexOne::before{
+  content: '';
+  height: calc(100% * 2.2608695652);
+  width: calc(100% * 1.3);
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-60deg) translate(-50%, -5.65385%); /*position with translate because absolute position goes at a 60 degree angle*/
+  transform-origin: 0 0;
+}
+
+#insideHexTwo{
+	height: 100%;
+	width: 100%;
+	transform: rotate(-60deg);
+	background: inherit;
+	z-index: -1;
+	position: absolute;
+  top: 0;
+  left: 0;
+	overflow: hidden;
+}
+
+#insideHexTwo::before{
+  content: '';
+  height: calc(100% * 2.2608695652);
+  width: calc(100% * 1.3);
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: rotate(60deg) translate(-50%, -5.65385%);
+  transform-origin: 0 0;
+}
+
+/* code spit out stuff */
+#codeHolder{
+  text-align: center;
+  padding-bottom: 60px;
+  padding-top: 20px;
+}
+#hexHTML, #hexCSS{
+  text-align: left;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  margin: auto;
+  color: #e6e6e6;
+  background-color: #1a1a1a;
+  height: 400px;
+  overflow: auto;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
